@@ -23,89 +23,38 @@ No final veremos se seu objetivo foi concluido.`)
 console.log();
 console.log('PRESS ENTER START GAME')
 prompt()
-// ----------------------------------------------------------------------- //
-
-console.log('<<- FASE 01 ->>');
-let perguntaUm = prompt('Mario BROSS, você foi ajudar na missão? [s/n]: ').toUpperCase()
-while (perguntaUm != 'S' && perguntaUm != 'N'){
-  console.log('Resposta Invalida.');
-  perguntaUm = prompt('Mario BROSS, você foi ajudar na missão? [s/n]: ').toUpperCase()
-}
-if (perguntaUm == 'S'){
-  console.log(`A resposta foi: ${perguntaUm}IM, você ganhou 1 ponto.`);
-  respostaSim ++
-}else{
-  console.log(`A resposta foi: ${perguntaUm}ÃO, você ganhou 0 pontos.`);
-}
-console.log();
-
-// ----------------------------------------------------------------------- //
-console.log('<<- FASE 02 ->>');
-let perguntaDois = prompt('Mario BROSS, conseguiram concluir a missão? [s/n]: ').toUpperCase()
-while (perguntaDois != 'S' && perguntaDois != 'N'){
-  console.log('Resposta Invalida.');
-  perguntaDois = prompt('Mario BROSS, conseguiram concluir a missão? [s/n]: ').toUpperCase()
-}
-if (perguntaDois == 'S'){
-  console.log(`A resposta foi: ${perguntaDois}IM, você ganhou 1 ponto.`);
-  respostaSim ++
-}else{
-  console.log(`A resposta foi: ${perguntaDois}ÃO, você ganhou 0 pontos.`);
-}
-console.log();
 
 // ----------------------------------------------------------------------- //
 
-console.log('<<- FASE 03 ->>');
-let perguntaTres = prompt('Mario BROSS, você se despediu de Luigi? [s/n]: ').toUpperCase()
-while (perguntaTres != 'S' && perguntaTres != 'N'){
-  console.log('Resposta Invalida.');
-  perguntaTres = prompt('Mario BROSS, você se despediu de Luigi? [s/n]: ').toUpperCase()
-}
-if (perguntaTres == 'S'){
-  console.log(`A resposta foi: ${perguntaTres}IM, você ganhou 1 ponto.`);
-  respostaSim ++
-}else{
-  console.log(`A resposta foi: ${perguntaTres}ÃO, você ganhou 0 pontos.`);
-}
-console.log();
+let perguntaUm = 'Mario BROSS, você foi ajudar na missão? [s/n]: '
+let perguntaDois = 'Mario BROSS, conseguiram concluir a missão? [s/n]: '
+let perguntaTres = 'Mario BROSS, você se despediu de Luigi? [s/n]: '
+let perguntaQuatro = 'Mario BROSS, vamos voltar pra casa? [s/n]: '
+let perguntaCinco = 'Mario BROSS, você chegou em casa? [s/n]: '
 
-// ----------------------------------------------------------------------- //
+let perguntas = [perguntaUm, perguntaDois, perguntaTres, perguntaQuatro, perguntaCinco]
+let respostas = []
 
-console.log('<<- FASE 04 ->>');
-let perguntaQuatro = prompt('Mario BROSS, vamos voltar pra casa? [s/n]: ').toUpperCase()
-while (perguntaQuatro != 'S' && perguntaQuatro != 'N'){
-  console.log('Resposta Invalida.');
-  perguntaQuatro = prompt('Mario BROSS, vamos voltar pra casa? [s/n]: ').toUpperCase()
+for (i = 0; i < perguntas.length; i++) {
+    while (true) {
+      respostas[i] = prompt(perguntas[i]).toUpperCase();
+      if (respostas[i] !== "S" && respostas[i] !== "N"){
+        console.log("Resposta inválida, responda S ou N.");
+      }else if (respostas[i] == 'S'){
+        console.log('A resposta foi: SIM, você ganhou 1 ponto.');
+        respostaSim++
+        break
+      }else if (respostas[i] == 'N'){
+        console.log('A resposta foi: NÃO, você ganhou 0 pontos.');
+        break
+      }
+  }
 }
-if (perguntaQuatro == 'S'){
-  console.log(`A resposta foi: ${perguntaQuatro}IM, você ganhou 1 ponto.`);
-  respostaSim ++
-}else{
-  console.log(`A resposta foi: ${perguntaQuatro}ÃO, você ganhou 0 pontos.`);
-}
-console.log();
-
-// ----------------------------------------------------------------------- //
-
-console.log('<<- FASE 05 ->>');
-let perguntaCinco = prompt('Mario BROSS, você chegou em casa? [s/n]: ').toUpperCase()
-while (perguntaCinco != 'S' && perguntaCinco != 'N'){
-  console.log('Resposta Invalida.');
-  perguntaCinco = prompt('Mario BROSS, você chegou em casa? [s/n]: ').toUpperCase()
-}
-if (perguntaCinco == 'S'){
-  console.log(`A resposta foi: ${perguntaCinco}IM, você ganhou 1 ponto.`);
-  respostaSim ++
-}else{
-  console.log(`A resposta foi: ${perguntaCinco}ÃO, você ganhou 0 pontos.`);
-}
-console.log();
-
-// ----------------------------------------------------------------------- //
 
 console.log('<<<- FIM DO JOGO! ->>> ');
 console.log();
+
+// ----------------------------------------------------------------------- //
 
 if (respostaSim == 0){
 console.log('      [0]PONTOS \n\nVocê falhou miseravelmente.');
@@ -122,7 +71,3 @@ console.log('      [0]PONTOS \n\nVocê falhou miseravelmente.');
 }
 
 console.log('----------------------------------------');
-
-
-
-
