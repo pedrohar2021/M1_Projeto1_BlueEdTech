@@ -23,16 +23,16 @@ console.log('PRESS ENTER START GAME')
 prompt()
 
 // ----------------------------------------------------------------------- //
-
+let perguntas = []
 let perguntaUm = '<<- FASE 01 ->> Mario BROSS, você foi ajudar na missão? [s/n]: '
 let perguntaDois = '<<- FASE 02 ->> Mario BROSS, conseguiram concluir a missão? [s/n]: '
 let perguntaTres = '<<- FASE 03 ->> Mario BROSS, você se despediu de Luigi? [s/n]: '
 let perguntaQuatro = '<<- FASE 04 ->> Mario BROSS, vamos voltar pra casa? [s/n]: '
 let perguntaCinco = '<<- FASE 05 ->> Mario BROSS, você chegou em casa? [s/n]: '
-let perguntas = [perguntaUm, perguntaDois, perguntaTres, perguntaQuatro, perguntaCinco]
+perguntas.push(perguntaUm, perguntaDois, perguntaTres, perguntaQuatro, perguntaCinco)
+
 let respostas = []
 let respostaSim = 0
-
 for (i = 0; i < perguntas.length; i++) {
   console.log();
     while (true) {
