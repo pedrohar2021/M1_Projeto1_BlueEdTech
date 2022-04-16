@@ -56,9 +56,7 @@ if (respostaSim == 0){
 console.log('      [0]PONTOS \n\nVocê falhou miseravelmente.');
 }else if (respostaSim == 1 || respostaSim == 2){
   console.log('   [1 ou 2]PONTOS \n\nVocê falha, mas ainda consegue fazer algo.');
-}/*else if (respostaSim == 2 ){
-  console.log('      [2]PONTOS \n\nVocê falha, mas ainda consegue fazer algo.');
-}*/else if (respostaSim == 3){
+}else if (respostaSim == 3){
   console.log('      [3]PONTOS \n\nVocê chega perto de conseguir alcançar seu objetivo, \nmas acaba falhando por pouco.');
 }else if (respostaSim == 4){
   console.log('      [4]PONTOS \n\nDepois de muito esforço você conquista seu objetivo, \nembora não de maneira perfeita.');
