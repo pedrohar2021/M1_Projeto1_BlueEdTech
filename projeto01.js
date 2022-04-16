@@ -1,8 +1,6 @@
 console.clear();
 const prompt = require('prompt-sync')();
 
-let respostaSim = 0
-
 console.log('----------------------------------------');
 console.log('<<<- PROJETO 1 - A JORNADA DO HERÓI ->>>');
 console.log('----------------------------------------');
@@ -26,14 +24,14 @@ prompt()
 
 // ----------------------------------------------------------------------- //
 
-let perguntaUm = 'Mario BROSS, você foi ajudar na missão? [s/n]: '
-let perguntaDois = 'Mario BROSS, conseguiram concluir a missão? [s/n]: '
-let perguntaTres = 'Mario BROSS, você se despediu de Luigi? [s/n]: '
-let perguntaQuatro = 'Mario BROSS, vamos voltar pra casa? [s/n]: '
-let perguntaCinco = 'Mario BROSS, você chegou em casa? [s/n]: '
-
+let perguntaUm = '<<- FASE 01 ->> Mario BROSS, você foi ajudar na missão? [s/n]: '
+let perguntaDois = '<<- FASE 02 ->> Mario BROSS, conseguiram concluir a missão? [s/n]: '
+let perguntaTres = '<<- FASE 03 ->> Mario BROSS, você se despediu de Luigi? [s/n]: '
+let perguntaQuatro = '<<- FASE 04 ->> Mario BROSS, vamos voltar pra casa? [s/n]: '
+let perguntaCinco = '<<- FASE 05 ->> Mario BROSS, você chegou em casa? [s/n]: '
 let perguntas = [perguntaUm, perguntaDois, perguntaTres, perguntaQuatro, perguntaCinco]
 let respostas = []
+let respostaSim = 0
 
 for (i = 0; i < perguntas.length; i++) {
     while (true) {
@@ -50,16 +48,14 @@ for (i = 0; i < perguntas.length; i++) {
       }
   }
 }
-
-console.log('<<<- FIM DO JOGO! ->>> ');
 console.log();
-
-// ----------------------------------------------------------------------- //
+console.log('<<<- FIM DO JOGO! ->>> ');
+console.log()
 
 if (respostaSim == 0){
 console.log('      [0]PONTOS \n\nVocê falhou miseravelmente.');
 }else if (respostaSim == 1 || respostaSim == 2){
-  console.log('      [1 ou 2]PONTOS \n\nVocê falha, mas ainda consegue fazer algo.');
+  console.log('   [1 ou 2]PONTOS \n\nVocê falha, mas ainda consegue fazer algo.');
 }/*else if (respostaSim == 2 ){
   console.log('      [2]PONTOS \n\nVocê falha, mas ainda consegue fazer algo.');
 }*/else if (respostaSim == 3){
