@@ -34,10 +34,12 @@ let respostas = []
 let respostaSim = 0
 
 for (i = 0; i < perguntas.length; i++) {
+  console.log();
     while (true) {
       respostas[i] = prompt(perguntas[i]).toUpperCase();
       if (respostas[i] !== "S" && respostas[i] !== "N"){
-        console.log("Resposta inválida, responda S ou N.");
+        console.log("Resposta inválida! responda [S] ou [N].");
+        console.log();
       }else if (respostas[i] == 'S'){
         console.log('A resposta foi: SIM, você ganhou 1 ponto.');
         respostaSim++
@@ -49,19 +51,19 @@ for (i = 0; i < perguntas.length; i++) {
   }
 }
 console.log();
-console.log('<<<- FIM DO JOGO! ->>> ');
+console.log('<<<------------------ FIM DO JOGO! ------------------>>> ');
 console.log()
 
 if (respostaSim == 0){
-console.log('      [0]PONTOS \n\nVocê falhou miseravelmente.');
+console.log('RESULT: [0]PONTOS \n\nVocê falhou miseravelmente.');
 }else if (respostaSim == 1 || respostaSim == 2){
-  console.log('   [1 ou 2]PONTOS \n\nVocê falha, mas ainda consegue fazer algo.');
+  console.log('RESULT: [1 ou 2]PONTOS \n\nVocê falha, mas ainda consegue fazer algo.');
 }else if (respostaSim == 3){
-  console.log('      [3]PONTOS \n\nVocê chega perto de conseguir alcançar seu objetivo, \nmas acaba falhando por pouco.');
+  console.log('RESULT: [3]PONTOS \n\nVocê chega perto de conseguir alcançar seu \nobjetivo, mas acaba falhando por pouco.');
 }else if (respostaSim == 4){
-  console.log('      [4]PONTOS \n\nDepois de muito esforço você conquista seu objetivo, \nembora não de maneira perfeita.');
+  console.log('RESULT: [4]PONTOS \n\nDepois de muito esforço você conquista seu \nobjetivo, embora não de maneira perfeita.');
 }else if (respostaSim == 5){
-  console.log('      [5]PONTOS \n\nVocê triunfa de maneira inquestionável.');
+  console.log('RESULT: [5]PONTOS \n\nVocê triunfa de maneira inquestionável.');
 }
-
-console.log('----------------------------------------');
+console.log();
+console.log('----------------------------------------------------');
